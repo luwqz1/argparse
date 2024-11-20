@@ -2,12 +2,14 @@
 #define SPLIT_H
 
 #include <stdlib.h>
+#include <string.h>
 
 #define DOUBLE_QUOTE_CHAR                          '\"'
 #define TERMINATOR_STRING                          '\0'
 #define MAX_BUFFER_SIZE                            1024
 
 typedef char* string;
+extern char* strdup(const char*);
 typedef struct { string *strings; size_t count; } SplittedString;
 
 /**
